@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Reddit Block Modal Remover V1",
+  "description": "Removes the block modal on reddit nsfw",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["https://*.reddit.com/*"],
+      "run_at": "document_start"
+    }
+  ]
+}
