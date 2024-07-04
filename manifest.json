@@ -6,11 +6,18 @@
   "action": {
     "default_popup": "popup.html"
   },
+  "permissions": [
+        "scripting",
+        "tabs"
+  ],
   "content_scripts": [
     {
       "js": ["content.js"],
       "matches": ["https://*.reddit.com/*"],
       "run_at": "document_start"
     }
-  ]
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
 }
